@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       </Head>
       <nav className="bg-white border-gray-200 px-4 py-2.5 bg-main-orange">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="https://flowbite.com/" className="flex items-center">
+          <a href="/" className="flex items-center">
             <h1 className="self-center text-xl font-semibold whitespace-nowrap text-white">
               抱っこさん
             </h1>

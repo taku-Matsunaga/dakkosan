@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import Layout from "../../components/layout";
+import fsPromises from "fs/promises";
+import path from "path";
+import Image from "next/image";
+import doctor1 from "../../public/images/doctor1.jpg";
+import doctor2 from "../../public/images/doctor2.jpg";
+import doctor3 from "../../public/images/doctor3.jpg";
 
 const addressList = [
   { value: "shinjuku", text: "新宿区" },
@@ -7,11 +13,11 @@ const addressList = [
   { value: "minato", text: "港区" },
 ];
 
-const Search = () => {
+const Search = (props) => {
+  const areaLists = props.postLists;
   const [area, setArea] = useState(null);
 
   const handleAddrTypeChange = (e) => {
-    console.log(e.target.value);
     setArea(e.target.value);
   };
 
@@ -32,7 +38,61 @@ const Search = () => {
               ></iframe>
             </div>
           </>
-        ) : null}
+        ) : (
+          areaLists
+            .filter((areaList) => {
+              return areaList.name === area;
+            })
+            .map((filteredArea, index) => (
+              <div className="aspect-video max-w-[500px] m-auto" key={index}>
+                <iframe
+                  src={filteredArea.src}
+                  width="100%"
+                  height="100%"
+                ></iframe>
+
+                <div className="bg-white py-6 sm:py-8 lg:py-12 my-6 mx-2 rounded-lg shadow-sm">
+                  <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
+                    <div>
+                      {filteredArea.img === "doctor1" ? (
+                        <Image
+                          className="rounded-full h-40 w-40 mx-auto object-cover"
+                          src={doctor1}
+                          alt="抱っこさんとは？"
+                          width={200}
+                          height={200}
+                        />
+                      ) : filteredArea.img === "doctor2" ? (
+                        <Image
+                          className="rounded-full h-40 w-40 mx-auto object-cover"
+                          src={doctor2}
+                          alt="抱っこさんとは？"
+                          width={200}
+                          height={200}
+                        />
+                      ) : filteredArea.img === "doctor3" ? (
+                        <Image
+                          className="rounded-full h-40 w-40 mx-auto object-cover"
+                          src={doctor3}
+                          alt="抱っこさんとは？"
+                          width={200}
+                          height={200}
+                        />
+                      ) : null}
+                    </div>
+                    <h3 className="text-lg font-bold mt-4">{filteredArea.title}</h3>
+                    <h3 className="text-lg font-bold">院長</h3>
+                    <h3 className="text-xl font-bold text-main-orange my-2">
+                      {filteredArea.doctor}
+                    </h3>
+                    <p className="text-sm leading-7">
+                      {filteredArea.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))
+        )}
 
         <div className="p-6">
           <label
@@ -47,7 +107,9 @@ const Search = () => {
             onChange={(e) => handleAddrTypeChange(e)}
           >
             <optgroup label="東京都" required>
-              <option value="" hidden>選択してください</option>
+              <option value="" hidden>
+                選択してください
+              </option>
               {addressList.map((address, key) => (
                 <option key={key} value={address.value}>
                   {address.text}
@@ -62,3 +124,14 @@ const Search = () => {
 };
 
 export default Search;
+
+export const getStaticProps = async () => {
+  const filePath = path.join(process.cwd(), "areaData.json");
+
+  const data = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(data);
+
+  return {
+    props: objectData,
+  };
+};
