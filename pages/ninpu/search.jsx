@@ -6,6 +6,7 @@ import Image from "next/image";
 import doctor1 from "../../public/images/doctor1.jpg";
 import doctor2 from "../../public/images/doctor2.jpg";
 import doctor3 from "../../public/images/doctor3.jpg";
+import Button from "../../components/button";
 
 const addressList = [
   { value: "shinjuku", text: "新宿区" },
@@ -80,15 +81,18 @@ const Search = (props) => {
                         />
                       ) : null}
                     </div>
-                    <h3 className="text-lg font-bold mt-4">{filteredArea.title}</h3>
+                    <h3 className="text-lg font-bold mt-4">
+                      {filteredArea.title}
+                    </h3>
                     <h3 className="text-lg font-bold">院長</h3>
                     <h3 className="text-xl font-bold text-main-orange my-2">
                       {filteredArea.doctor}
                     </h3>
-                    <p className="text-sm leading-7">
+                    <p className="text-sm leading-7 mb-6">
                       {filteredArea.description}
                     </p>
                   </div>
+                  <Button text="予約する" href="/ninpu/booked" />
                 </div>
               </div>
             ))
@@ -106,16 +110,14 @@ const Search = (props) => {
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             onChange={(e) => handleAddrTypeChange(e)}
           >
-            <optgroup label="東京都" required>
-              <option value="" hidden>
-                選択してください
+            <option value="" hidden>
+              選択してください
+            </option>
+            {addressList.map((address, key) => (
+              <option key={key} value={address.value}>
+                {address.text}
               </option>
-              {addressList.map((address, key) => (
-                <option key={key} value={address.value}>
-                  {address.text}
-                </option>
-              ))}
-            </optgroup>
+            ))}
           </select>
         </div>
       </div>
