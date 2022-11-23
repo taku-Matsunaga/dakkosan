@@ -26,10 +26,10 @@ const Layout = ({ children }) => {
       <footer className="max-w-screen-2xl px-4 md:px-8 mx-auto bg-main-orange w-full">
         <div className="flex flex-col items-center pt-6">
           <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-4">
-            <a href="#" className="text-white text-sm text-white">
+            <a href="/" className="text-white text-sm text-white">
               トップ
             </a>
-            <a href="#" className="text-gray-500 text-sm text-white">
+            <a href="/ninpu/dashboard" className="text-gray-500 text-sm text-white">
               妊婦さんページ
             </a>
             <a href="#" className="text-gray-500 text-sm text-white">

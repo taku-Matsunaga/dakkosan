@@ -38,7 +38,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-2 mb-24">
-            <div class="block p-6 bg-white rounded-lg shadow-sm m-auto w-11/12">
+            <div class="block p-6 bg-white rounded-lg shadow-sm m-auto w-11/12 mb-8">
               <Image
                 src={top2}
                 alt="医者"
