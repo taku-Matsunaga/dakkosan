@@ -18,7 +18,7 @@ const index = () => {
           <div className="max-w-[500px] m-auto">
             <div class="flex gap-3 justify-between mb-5">
               <Link
-                href=""
+                href="/ninpu/record/capture"
                 className="bg-main-orange rounded-lg flex flex-col items-center p-4 aspect-square w-52 justify-center shadow-md"
               >
                 <span class="material-symbols-outlined text-white text-4xl pb-4">

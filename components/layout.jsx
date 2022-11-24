@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
         </div>
 
         <div className="text-gray-400 text-sm text-center py-8 text-white">
-          © 2021
+          © 2022
         </div>
       </footer>
     </div>
