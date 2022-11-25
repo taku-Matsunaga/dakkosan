@@ -29,7 +29,7 @@ const Store = () => {
         for (let i = 0; i < 5; i++) {
           items.push(
             <>
-              <div>
+              <div className="my-8">
                 <div
                   role="button"
                   onClick={handleOpenDialog}
