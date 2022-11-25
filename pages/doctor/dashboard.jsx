@@ -25,7 +25,7 @@ const DoctorDashboard = () => {
                 <p className="text-white font-bold">カルテ一覧</p>
               </Link>
               <Link
-                href="/ninpu/record"
+                href="/doctor/settings"
                 className="bg-main-orange rounded-lg flex flex-col items-center p-4 aspect-square w-52 justify-center shadow-md"
               >
                 <span class="material-symbols-outlined text-white text-4xl pb-4">

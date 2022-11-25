@@ -92,7 +92,9 @@ const Search = (props) => {
                       {filteredArea.description}
                     </p>
                   </div>
-                  <Button text="予約する" href="/ninpu/booked" />
+                  <div className="mx-4">
+                    <Button text="予約する" href="/ninpu/booked" />
+                  </div>
                 </div>
               </div>
             ))

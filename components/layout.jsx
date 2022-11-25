@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
             <a href="/ninpu/dashboard" className="text-gray-500 text-sm text-white">
               妊婦さんページ
             </a>
-            <a href="#" className="text-gray-500 text-sm text-white">
+            <a href="/doctor/dashboard" className="text-gray-500 text-sm text-white">
               産婦人科ページ
             </a>
           </nav>
