@@ -12,7 +12,7 @@ const Capture = () => {
           className="bg-main-orange rounded-lg flex flex-col items-center p-4 aspect-square w-40 justify-center shadow-md text-white font-bold"
           onClick={handleClick}
         >
-          <span class="material-symbols-outlined text-white text-4xl pb-4">
+          <span className="material-symbols-outlined text-white text-4xl pb-4">
             photo_camera
           </span>
           カルテを撮影

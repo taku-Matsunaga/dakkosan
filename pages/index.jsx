@@ -22,7 +22,7 @@ export default function Home() {
           </div>
           <div className="w-4/5 mx-auto flex flex-col gap-4 mb-20">
             <Button text="妊婦さん会員でログイン" href="/ninpu/login" />
-            <OutlinedBtn text="産婦人科会員でログイン" />
+            <OutlinedBtn text="産婦人科会員でログイン" href="/doctor/login" />
           </div>
         </section>
         <section>
