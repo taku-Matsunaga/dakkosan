@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Layout from "../../../components/layout";
+import OutlinedBtn from "../../../components/outlinedBtn";
 
 const Capture = () => {
   const inputRef = useRef();
@@ -26,6 +27,9 @@ const Capture = () => {
         ref={inputRef}
         className="hidden"
       />
+      <div className="my-8 mx-4">
+        <OutlinedBtn text="カルテメニュー画面に戻る" href="/ninpu/record" />
+      </div>
     </Layout>
   );
 };
