@@ -34,12 +34,12 @@ const Dashboard = () => {
                 <p className="text-white font-bold">診断カルテ</p>
               </Link>
             </div>
-            <SubButton
+            {/* <SubButton
               text="アンケートに回答"
               isTarget="_blank"
               href="https://docs.google.com/forms/d/e/1FAIpQLSdpCueldaiK2WcFvdePnsnfTo-xrTibhqCsAc7nnqfrSfYN_Q/viewform"
               icon={<span className="material-symbols-outlined">edit_note</span>}
-            />
+            /> */}
           </div>
         </div>
       </div>
