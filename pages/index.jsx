@@ -38,7 +38,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-2 mb-24">
-            <div class="block p-6 bg-white rounded-lg shadow-sm m-auto w-11/12 mb-8">
+            <div className="block p-6 bg-white rounded-lg shadow-sm m-auto w-11/12 mb-8">
               <Image
                 src={top2}
                 alt="医者"
@@ -46,10 +46,10 @@ export default function Home() {
                 height={200}
                 className="m-auto"
               />
-              <h4 class="mb-2 text-md font-bold tracking-tight text-center">
+              <h4 className="mb-2 text-md font-bold tracking-tight text-center">
                 過去の診察と現在の状況を先生と共有
               </h4>
-              <p class="text-gray-500 font-light">
+              <p className="text-gray-500 font-light">
                 <span className="block">
                   「急にかかりつけのお医者さんではない産婦人科へ行かなければ行かなくなった！」
                 </span>
@@ -63,7 +63,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div class="block p-6 bg-white rounded-lg shadow-sm m-auto w-11/12">
+            <div className="block p-6 bg-white rounded-lg shadow-sm m-auto w-11/12">
               <Image
                 src={top3}
                 alt="医者"
@@ -71,10 +71,10 @@ export default function Home() {
                 height={200}
                 className="m-auto"
               />
-              <h4 class="mb-2 text-md font-bold tracking-tight text-center">
+              <h4 className="mb-2 text-md font-bold tracking-tight text-center">
                 マップ上から対応可能な産婦人科を簡単予約
               </h4>
-              <p class="text-gray-500 font-light">
+              <p className="text-gray-500 font-light">
                 普段行かない産婦人科を新しく探す際に、情報が何もないところから産婦人科を探すのではなく、どんな先生がいてどういった分野や対応ができるかを簡単に確認することができます。大丈夫そうな先生が見つかったらそのまま予約も同一ページ上からスムーズに行えます。
               </p>
             </div>
