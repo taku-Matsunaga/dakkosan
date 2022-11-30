@@ -36,7 +36,8 @@ const DoctorDashboard = () => {
             </div>
             <SubButton
               text="アンケートに回答"
-              href=""
+              isTarget="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdpCueldaiK2WcFvdePnsnfTo-xrTibhqCsAc7nnqfrSfYN_Q/viewform"
               icon={<span class="material-symbols-outlined">edit_note</span>}
             />
           </div>

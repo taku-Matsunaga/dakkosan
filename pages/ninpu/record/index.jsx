@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import Layout from "../../../components/layout";
 import OutlinedBtn from "../../../components/outlinedBtn";
-import SubButton from "../../../components/subBtn";
 
 const index = () => {
   return (
